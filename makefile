@@ -3,19 +3,19 @@ CFLAGS = -g -O0 -Wall -std=c11
 VGFLAGS = --track-origins=yes --tool=memcheck --leak-check=yes --suppressions=suppressions
 
 mainA: Node.c List.c mainA.c
-	$(CC) $(CFLAGS) -lm -o mainA Node.c List.c mainA.c
+	$(CC) $(CFLAGS) -o mainA Node.c List.c mainA.c -lm 
 
 mainB: Node.c List.c mainB.c
-	$(CC) $(CFLAGS) -lm -o mainB Node.c List.c mainB.c
+	$(CC) $(CFLAGS) -o mainB Node.c List.c mainB.c -lm
 
 mainC: Node.c List.c mainC.c
-	$(CC) $(CFLAGS) -lm -o mainC Node.c List.c mainC.c
+	$(CC) $(CFLAGS) -o mainC Node.c List.c mainC.c -lm
 
 mainD: Node.c List.c mainD.c
-	$(CC) $(CFLAGS) -lm -o mainD Node.c List.c mainD.c
+	$(CC) $(CFLAGS) -o mainD Node.c List.c mainD.c -lm
 
 mainE: Node.c List.c mainE.c
-	$(CC) $(CFLAGS) -lm -o mainE Node.c List.c mainE.c
+	$(CC) $(CFLAGS) -o mainE Node.c List.c mainE.c -lm
 
 .PHONY: runA runB runC runD clean
 
